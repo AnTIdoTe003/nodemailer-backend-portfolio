@@ -13,6 +13,9 @@ const sendMailController = async (req, res) => {
         user: 'viperbale.db@gmail.com',
         pass: process.env.APP_PASSWORD,
       },
+      tls:{
+        rejectUnauthorized:false
+      }
     };
     let transporter = nodemailer.createTransport(config);
     let messageConfig = {
