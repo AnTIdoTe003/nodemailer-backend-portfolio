@@ -11,7 +11,7 @@ const sendMailController = async (req, res) => {
       service: "gmail",
       auth: {
         user: 'viperbale.db@gmail.com',
-        pass: process.env.APP_PASSWORD,
+        pass: 'xkmf swee fnqo zaqb',
       },
       tls:{
         rejectUnauthorized:false
@@ -20,9 +20,9 @@ const sendMailController = async (req, res) => {
     let transporter = nodemailer.createTransport(config);
     let messageConfig = {
       from : 'viperbale.db@gmail.com',
-      to : userEmail,
+      to : 'debgandhar.crazebazar@gmail.com',
       subject: "Holaaa!!!",
-      html: `${message}`
+      html: `<div>Hellow</div>`
   }
   transporter.sendMail(messageConfig).then(() => {
     return res.status(201).json({
